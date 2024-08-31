@@ -1,12 +1,18 @@
+"use client"; // This marks the component as a Client Component
+
 import React from 'react';
 import BoxCard from '../components/BoxCard';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation'; // Correct import for useRouter in Next.js 13+
 
 function Page() {
   // Sample data; you can replace these with dynamic data if needed
   const name = "John Doe";
   const email = "john.doe@example.com";
   const tasksAccomplished = 5; // Example number of tasks accomplished
+
+  // Using useRouter to navigate back
+  const router = useRouter();
 
   return (
     <div className="flex flex-col items-center justify-center w-full h-screen p-2 bg-red-50">
@@ -26,6 +32,14 @@ function Page() {
           Log in
         </button>
       </Link>
+
+      {/* Back button */}
+      <button 
+        onClick={() => router.back()} 
+        className="mt-4 px-6 py-2 bg-gray-600 text-white rounded hover:bg-gray-700 transition"
+      >
+        Go Back
+      </button>
     </div>
   );
 }
