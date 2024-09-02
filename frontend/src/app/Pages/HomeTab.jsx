@@ -41,7 +41,7 @@ function HomeTab() {
       case 'accomplishment':
         return <Accompolishment />;
       default:
-        return <HomePage />;
+        return <HomeTab />;
     }
   };
 
