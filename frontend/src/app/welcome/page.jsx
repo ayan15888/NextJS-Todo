@@ -9,7 +9,7 @@ const Page = () => {
 
   // Function to handle the redirection to the /register page
   const handleSignUp = () => {
-    router.push('/register');
+    router.push('/auth/register');
   };
 
   return (

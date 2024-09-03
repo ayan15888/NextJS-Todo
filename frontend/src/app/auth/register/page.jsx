@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import FormInput from '../components/FormInput';
+import FormInput from '../../components/FormInput';
 
 function Register() {
   return (
